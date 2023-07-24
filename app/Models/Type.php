@@ -12,8 +12,7 @@ class Type extends Model
     protected $fillable = [
 
         "name",
-        "img",
-        "project_id"
+        "img"
 
     ];
     public function projects() {
