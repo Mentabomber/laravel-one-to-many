@@ -17,5 +17,7 @@ class Project extends Model
         "project_manager",
         "thumb"
     ];
-
+    public function type() {
+        return $this -> hasOne(Type :: class);
+    }
 }
