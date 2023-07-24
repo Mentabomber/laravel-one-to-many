@@ -15,7 +15,8 @@ class Project extends Model
         "description",
         "start_date",
         "project_manager",
-        "thumb"
+        "thumb",
+        "project_id"
     ];
     public function type() {
         return $this -> hasOne(Type :: class);
