@@ -25,6 +25,7 @@ class ProjectFactory extends Factory
             "thumb" => "http://picsum.photos/350/350",
 
 
+
         ];
     }
 }

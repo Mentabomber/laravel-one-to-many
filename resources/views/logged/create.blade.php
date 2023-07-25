@@ -29,8 +29,9 @@
                 <br>
                 <input type="text" name="thumb" id="thumb">
                 <br>
-                <select name="type" id="type">
-
+                <label for="type_id">Type</label>
+                <br>
+                <select name="type_id" id="type_id">
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">
                             {{ $type->name }}

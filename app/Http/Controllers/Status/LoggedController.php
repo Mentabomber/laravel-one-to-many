@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Status;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Models\Project;
 use App\Models\Type;
 
@@ -19,7 +20,7 @@ class LoggedController extends Controller
     public function create(){
         $types = Type :: all();
 
-        return view('create', compact('types'));
+        return view('logged.create', compact('types'));
     }
     public function store(Request $request) {
 
@@ -27,6 +28,6 @@ class LoggedController extends Controller
 
         $project = Project :: create($data);
 
-        return redirect() -> route('project.show', $project -> id);
+        return redirect() -> route('show', $project -> id);
     }
 }

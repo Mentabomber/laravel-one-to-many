@@ -25,15 +25,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/create,' [LoggedController::class, 'create'])
-// -> middleware(['auth'])
-// -> name('project.create');
+Route :: get('/show', [LoggedController :: class, 'show'])
+    -> middleware(['auth'])
+    -> name('project.show');
 Route :: get('/create', [LoggedController :: class, 'create'])
     -> middleware(['auth'])
     -> name('project.create');
 Route :: post('/store', [LoggedController :: class, 'store'])
     -> middleware(['auth'])
     -> name('project.store');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
