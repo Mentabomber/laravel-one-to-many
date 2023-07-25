@@ -12,10 +12,12 @@ class Type extends Model
     protected $fillable = [
 
         "name",
-        "img"
+        "description"
 
     ];
     public function projects() {
-        return $this -> belongsToMany(Project :: class);
+        return $this -> hasMany(Project :: class);
+
+                        // avevo messo belongsToMany
     }
 }
